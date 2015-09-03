@@ -5,17 +5,17 @@
 1.使用:
 #import "HyTransitions.h"
 #import "LoglnButton.h"
--(void)viewDidLoad
-{
+-(void)viewDidLoad{
+
     LoglnButton *log = [[LoglnButton alloc] initWithFrame:CGRectMake(20, CGRectGetHeight(self.view.bounds) - (40 + 80), [UIScreen mainScreen].bounds.size.width - 40, 40)];
     [log setBackgroundColor:[UIColor colorWithRed:0 green:119/255.0f blue:204.0f/255.0f alpha:1]];
     [self.view addSubview:log];
     [log setTitle:@"登录" forState:UIControlStateNormal];
     [log addTarget:self action:@selector(PresentViewController:) forControlEvents:UIControlEventTouchUpInside];
+ 
 }
 
--(void)PresentViewController:(LoglnButton *)button
-{
+-(void)PresentViewController:(LoglnButton *)button{
     
     [button StartAnimationCompletion:^{
         
