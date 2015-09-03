@@ -5,7 +5,8 @@
 1.使用:
 #import "HyTransitions.h"
 #import "LoglnButton.h"
--(void)viewDidLoad{
+
+1.1 创建button
 
     LoglnButton *log = [[LoglnButton alloc] initWithFrame:CGRectMake(20, CGRectGetHeight(self.view.bounds) - (40 + 80), [UIScreen mainScreen].bounds.size.width - 40, 40)];
     [log setBackgroundColor:[UIColor colorWithRed:0 green:119/255.0f blue:204.0f/255.0f alpha:1]];
@@ -13,9 +14,7 @@
     [log setTitle:@"登录" forState:UIControlStateNormal];
     [log addTarget:self action:@selector(PresentViewController:) forControlEvents:UIControlEventTouchUpInside];
  
-}
-
--(void)PresentViewController:(LoglnButton *)button{
+ 1.2 实现方法
     
     [button StartAnimationCompletion:^{
         
@@ -28,16 +27,15 @@
         
     });
     
-}
+ 1.3 创建控制器
 
-- (void)didPresentControllerButtonTouch
-{
     UIViewController *controller = [SecondViewController new];
     
     controller.transitioningDelegate = self;
     
     [self presentViewController:controller animated:YES completion:nil];
-}
+ 
+ 1.4 实现代理
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
                                                                   presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
