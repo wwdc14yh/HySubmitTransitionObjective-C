@@ -13,7 +13,9 @@
     [log setTitle:@"登录" forState:UIControlStateNormal];
     [log addTarget:self action:@selector(PresentViewController:) forControlEvents:UIControlEventTouchUpInside];
 }
-    -(void)PresentViewController:(LoglnButton *)button{
+
+-(void)PresentViewController:(LoglnButton *)button
+{
     
     [button StartAnimationCompletion:^{
         
