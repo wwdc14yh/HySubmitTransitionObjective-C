@@ -14,6 +14,11 @@
 		87AD40F81B972FA8007B3214 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87AD40F71B972FA8007B3214 /* Images.xcassets */; };
 		87AD40FB1B972FA8007B3214 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87AD40F91B972FA8007B3214 /* LaunchScreen.xib */; };
 		87AD41071B972FA8007B3214 /* ExampleObjective_CTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AD41061B972FA8007B3214 /* ExampleObjective_CTests.m */; };
+		87AD41171B972FCE007B3214 /* SpinerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AD41121B972FCE007B3214 /* SpinerLayer.m */; };
+		87AD41181B972FCE007B3214 /* LoglnButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AD41141B972FCE007B3214 /* LoglnButton.m */; };
+		87AD41191B972FCE007B3214 /* HyTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AD41161B972FCE007B3214 /* HyTransitions.m */; };
+		87AD411C1B972FDD007B3214 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AD411B1B972FDD007B3214 /* SecondViewController.m */; };
+		87AD411E1B97D0C8007B3214 /* Untitled.gif in Resources */ = {isa = PBXBuildFile; fileRef = 87AD411D1B97D0C8007B3214 /* Untitled.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +40,20 @@
 		87AD40F11B972FA8007B3214 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		87AD40F21B972FA8007B3214 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		87AD40F51B972FA8007B3214 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		87AD40F71B972FA8007B3214 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		87AD40F71B972FA8007B3214 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "ExampleObjective-C/Images.xcassets"; sourceTree = "<group>"; };
 		87AD40FA1B972FA8007B3214 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		87AD41001B972FA8007B3214 /* ExampleObjective-CTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ExampleObjective-CTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87AD41051B972FA8007B3214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87AD41061B972FA8007B3214 /* ExampleObjective_CTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleObjective_CTests.m; sourceTree = "<group>"; };
+		87AD41111B972FCE007B3214 /* SpinerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpinerLayer.h; sourceTree = "<group>"; };
+		87AD41121B972FCE007B3214 /* SpinerLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpinerLayer.m; sourceTree = "<group>"; };
+		87AD41131B972FCE007B3214 /* LoglnButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoglnButton.h; sourceTree = "<group>"; };
+		87AD41141B972FCE007B3214 /* LoglnButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoglnButton.m; sourceTree = "<group>"; };
+		87AD41151B972FCE007B3214 /* HyTransitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyTransitions.h; sourceTree = "<group>"; };
+		87AD41161B972FCE007B3214 /* HyTransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyTransitions.m; sourceTree = "<group>"; };
+		87AD411A1B972FDD007B3214 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		87AD411B1B972FDD007B3214 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		87AD411D1B97D0C8007B3214 /* Untitled.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Untitled.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +77,8 @@
 		87AD40DE1B972FA8007B3214 = {
 			isa = PBXGroup;
 			children = (
+				87AD411F1B97D0D3007B3214 /* Resources */,
+				87AD41101B972FBE007B3214 /* Class */,
 				87AD40E91B972FA8007B3214 /* ExampleObjective-C */,
 				87AD41031B972FA8007B3214 /* ExampleObjective-CTests */,
 				87AD40E81B972FA8007B3214 /* Products */,
@@ -85,8 +101,9 @@
 				87AD40EF1B972FA8007B3214 /* AppDelegate.m */,
 				87AD40F11B972FA8007B3214 /* ViewController.h */,
 				87AD40F21B972FA8007B3214 /* ViewController.m */,
+				87AD411A1B972FDD007B3214 /* SecondViewController.h */,
+				87AD411B1B972FDD007B3214 /* SecondViewController.m */,
 				87AD40F41B972FA8007B3214 /* Main.storyboard */,
-				87AD40F71B972FA8007B3214 /* Images.xcassets */,
 				87AD40F91B972FA8007B3214 /* LaunchScreen.xib */,
 				87AD40EA1B972FA8007B3214 /* Supporting Files */,
 			);
@@ -117,6 +134,28 @@
 				87AD41051B972FA8007B3214 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		87AD41101B972FBE007B3214 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				87AD41111B972FCE007B3214 /* SpinerLayer.h */,
+				87AD41121B972FCE007B3214 /* SpinerLayer.m */,
+				87AD41131B972FCE007B3214 /* LoglnButton.h */,
+				87AD41141B972FCE007B3214 /* LoglnButton.m */,
+				87AD41151B972FCE007B3214 /* HyTransitions.h */,
+				87AD41161B972FCE007B3214 /* HyTransitions.m */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
+		87AD411F1B97D0D3007B3214 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				87AD411D1B97D0C8007B3214 /* Untitled.gif */,
+				87AD40F71B972FA8007B3214 /* Images.xcassets */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87AD40F61B972FA8007B3214 /* Main.storyboard in Resources */,
+				87AD411E1B97D0C8007B3214 /* Untitled.gif in Resources */,
 				87AD40FB1B972FA8007B3214 /* LaunchScreen.xib in Resources */,
 				87AD40F81B972FA8007B3214 /* Images.xcassets in Resources */,
 			);
@@ -221,7 +261,11 @@
 			files = (
 				87AD40F31B972FA8007B3214 /* ViewController.m in Sources */,
 				87AD40F01B972FA8007B3214 /* AppDelegate.m in Sources */,
+				87AD41171B972FCE007B3214 /* SpinerLayer.m in Sources */,
+				87AD411C1B972FDD007B3214 /* SecondViewController.m in Sources */,
+				87AD41181B972FCE007B3214 /* LoglnButton.m in Sources */,
 				87AD40ED1B972FA8007B3214 /* main.m in Sources */,
+				87AD41191B972FCE007B3214 /* HyTransitions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
