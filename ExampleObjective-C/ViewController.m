@@ -12,6 +12,7 @@
 #import "LoglnButton.h"
 
 @interface ViewController ()<UIViewControllerTransitioningDelegate>
+@property (weak, nonatomic) IBOutlet UISwitch *Switch;
 
 @end
 
@@ -29,32 +30,46 @@
     [log setBackgroundColor:[UIColor colorWithRed:0 green:119/255.0f blue:204.0f/255.0f alpha:1]];
     [self.view addSubview:log];
     [log setTitle:@"登录" forState:UIControlStateNormal];
-    [log addTarget:self action:@selector(Pre:) forControlEvents:UIControlEventTouchUpInside];
-    
+    [log addTarget:self action:@selector(PresentViewController:) forControlEvents:UIControlEventTouchUpInside];
+ 
 }
 
--(void)Pre:(LoglnButton *)button{
+-(void)PresentViewController:(LoglnButton *)button{
+    
+    //模拟网络访问
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        if (_Switch.on) {
+            //网络正常 或者是密码账号正确跳转动画
+            [button ExitAnimation];
+        }else{
+            //网络错误 或者是密码不正确还原动画
+            [button ErrorRevertAnimation];
+        }
+    });
+    
     
     [button StartAnimationCompletion:^{
         
-        [self didPresentControllerButtonTouch];
-
+        //网络结束后执行的方法
+        if (_Switch.on) {
+            [self didPresentControllerButtonTouch];
+        }
+        
     }];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        [button ExitAnimation];
-        
-    });
-    
 }
 
 - (void)didPresentControllerButtonTouch
 {
+    
     UIViewController *controller = [SecondViewController new];
     
     controller.transitioningDelegate = self;
     
-    [self presentViewController:controller animated:YES completion:nil];
+    UINavigationController *nai = [[UINavigationController alloc] initWithRootViewController:controller];
+    nai.transitioningDelegate = self;
+    
+    [self presentViewController:nai animated:YES completion:nil];
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented

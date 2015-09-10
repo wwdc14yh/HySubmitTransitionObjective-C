@@ -460,6 +460,7 @@
 				87AD410C1B972FA8007B3214 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87AD410D1B972FA8007B3214 /* Build configuration list for PBXNativeTarget "ExampleObjective-CTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +469,7 @@
 				87AD410F1B972FA8007B3214 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

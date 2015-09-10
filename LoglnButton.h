@@ -17,6 +17,8 @@ typedef void(^Completion)();
 
 -(void)StartAnimationCompletion:(Completion)block;
 
+-(void)ErrorRevertAnimation;
+
 -(void)ExitAnimation;
 
 @end

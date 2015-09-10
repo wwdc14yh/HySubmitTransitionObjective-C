@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,6 +20,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="RDn-NM-Yt6">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZFL-7t-90b">
+                                <rect key="frame" x="266" y="529" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="5fH-70-GEj"/>
+                                    <constraint firstAttribute="height" constant="31" id="O48-TZ-SkQ"/>
+                                </constraints>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -26,9 +34,14 @@
                             <constraint firstItem="RDn-NM-Yt6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="bk5-Zc-cDO"/>
                             <constraint firstItem="RDn-NM-Yt6" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="bqs-1n-msm"/>
                             <constraint firstAttribute="centerX" secondItem="RDn-NM-Yt6" secondAttribute="centerX" id="f0U-Id-KeL"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ZFL-7t-90b" secondAttribute="bottom" constant="8" id="wTf-aO-C5B"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZFL-7t-90b" secondAttribute="trailing" constant="-11" id="y9T-J4-wOs"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="Switch" destination="ZFL-7t-90b" id="XB2-hW-d0a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

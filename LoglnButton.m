@@ -19,6 +19,8 @@
 
 @property (nonatomic,strong) Completion block;
 
+@property (nonatomic,retain) UIColor *color;
+
 @end
 
 @implementation LoglnButton
@@ -47,6 +49,7 @@
 -(void)StartAnimationCompletion:(Completion)block{
     
     _block = block;
+    [self performSelector:@selector(Revert) withObject:nil afterDelay:0.f];
     [self.layer addSublayer:_spiner];
     CABasicAnimation *shrinkAnim = [CABasicAnimation animationWithKeyPath:@"bounds.size.width"];
     shrinkAnim.fromValue = @(CGRectGetWidth(self.bounds));
@@ -58,6 +61,54 @@
     [self.layer addAnimation:shrinkAnim forKey:shrinkAnim.keyPath];
     [_spiner animation];
     [self setUserInteractionEnabled:false];
+}
+
+-(void)ErrorRevertAnimation
+{
+    CABasicAnimation *shrinkAnim = [CABasicAnimation animationWithKeyPath:@"bounds.size.width"];
+    shrinkAnim.fromValue = @(CGRectGetHeight(self.bounds));
+    shrinkAnim.toValue = @(CGRectGetWidth(self.bounds));
+    shrinkAnim.duration = _shrinkDuration;
+    shrinkAnim.timingFunction = _shrinkCurve;
+    shrinkAnim.fillMode = kCAFillModeForwards;
+    shrinkAnim.removedOnCompletion = false;
+    _color = self.backgroundColor;
+    
+    CABasicAnimation *backgroundColor = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
+    //backgroundColor.fromValue = (__bridge id)self.backgroundColor.CGColor;
+    backgroundColor.toValue  = (__bridge id)[UIColor redColor].CGColor;
+    backgroundColor.duration = 0.3f;
+    backgroundColor.timingFunction = _shrinkCurve;
+    backgroundColor.fillMode = kCAFillModeForwards;
+    backgroundColor.removedOnCompletion = false;
+    
+    CAKeyframeAnimation *keyFrame = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    CGPoint point = self.layer.position;
+    keyFrame.values = @[[NSValue valueWithCGPoint:CGPointMake(point.x, point.y)],
+                        
+                        [NSValue valueWithCGPoint:CGPointMake(point.x - 10, point.y)],
+                        
+                        [NSValue valueWithCGPoint:CGPointMake(point.x + 10, point.y)],
+                        
+                        [NSValue valueWithCGPoint:CGPointMake(point.x - 10, point.y)],
+                        
+                        [NSValue valueWithCGPoint:CGPointMake(point.x + 10, point.y)],
+                        
+                        [NSValue valueWithCGPoint:CGPointMake(point.x - 10, point.y)],
+                        
+                        [NSValue valueWithCGPoint:CGPointMake(point.x + 10, point.y)],
+                        
+                        [NSValue valueWithCGPoint:point]];
+    keyFrame.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    keyFrame.duration = 0.7f;
+    keyFrame.delegate = self;
+    self.layer.position = point;
+    
+    [self.layer addAnimation:backgroundColor forKey:backgroundColor.keyPath];
+    [self.layer addAnimation:keyFrame forKey:keyFrame.keyPath];
+    [self.layer addAnimation:shrinkAnim forKey:shrinkAnim.keyPath];
+    [_spiner stopAnimation];
+    [self setUserInteractionEnabled:true];
 }
 
 -(void)ExitAnimation{
@@ -88,8 +139,21 @@
         [NSTimer scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(DidStopAnimation) userInfo:nil repeats:nil];
         
     }
-    if ([cab.keyPath isEqualToString:@"bounds.size.width"]) {
+    if ([cab.keyPath isEqualToString:@"position"]) {
+        //[self performSelector:@selector(Revert) withObject:nil afterDelay:0.2];
     }
+    
+}
+
+-(void)Revert{
+
+    CABasicAnimation *backgroundColor = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
+    backgroundColor.toValue  = (__bridge id)self.backgroundColor.CGColor;
+    backgroundColor.duration = 0.3f;
+    backgroundColor.timingFunction = _shrinkCurve;
+    backgroundColor.fillMode = kCAFillModeForwards;
+    backgroundColor.removedOnCompletion = false;
+    [self.layer addAnimation:backgroundColor forKey:@"backgroundColors"];
     
 }
 
