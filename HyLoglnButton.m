@@ -100,7 +100,7 @@
                         
                         [NSValue valueWithCGPoint:point]];
     keyFrame.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    keyFrame.duration = 0.7f;
+    keyFrame.duration = 0.5f;
     keyFrame.delegate = self;
     self.layer.position = point;
     
