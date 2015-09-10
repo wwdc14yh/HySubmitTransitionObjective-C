@@ -9,7 +9,7 @@
 #import "SecondViewController.h"
 #import "ViewController.h"
 #import "HyTransitions.h"
-#import "LoglnButton.h"
+#import "HyLoglnButton.h"
 
 @interface ViewController ()<UIViewControllerTransitioningDelegate>
 @property (weak, nonatomic) IBOutlet UISwitch *Switch;
@@ -26,7 +26,7 @@
 
 -(void)createPresentControllerButton{
 
-    LoglnButton *log = [[LoglnButton alloc] initWithFrame:CGRectMake(20, CGRectGetHeight(self.view.bounds) - (40 + 80), [UIScreen mainScreen].bounds.size.width - 40, 40)];
+    HyLoglnButton *log = [[HyLoglnButton alloc] initWithFrame:CGRectMake(20, CGRectGetHeight(self.view.bounds) - (40 + 80), [UIScreen mainScreen].bounds.size.width - 40, 40)];
     [log setBackgroundColor:[UIColor colorWithRed:0 green:119/255.0f blue:204.0f/255.0f alpha:1]];
     [self.view addSubview:log];
     [log setTitle:@"登录" forState:UIControlStateNormal];
@@ -34,7 +34,7 @@
  
 }
 
--(void)PresentViewController:(LoglnButton *)button{
+-(void)PresentViewController:(HyLoglnButton *)button{
     
     //模拟网络访问
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -46,9 +46,8 @@
             //网络错误 或者是密码不正确还原动画
             [button ErrorRevertAnimation];
         }
+        
     });
-    
-    
     [button StartAnimationCompletion:^{
         
         //网络结束后执行的方法

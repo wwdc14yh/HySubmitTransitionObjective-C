@@ -1,5 +1,5 @@
 //
-//  LoglnButton.h
+//  HyLoglnButton.h
 //  Example
 //
 //  Created by  东海 on 15/9/2.
@@ -11,7 +11,7 @@
 
 typedef void(^Completion)();
 
-@interface LoglnButton : UIButton
+@interface HyLoglnButton : UIButton
 
 @property (nonatomic,retain) SpinerLayer *spiner;
 

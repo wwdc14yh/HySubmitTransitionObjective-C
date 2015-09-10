@@ -1,15 +1,15 @@
 //
-//  LoglnButton.m
+//  HyLoglnButton.m
 //  Example
 //
 //  Created by  东海 on 15/9/2.
 //  Copyright (c) 2015年 Jonathan Tribouharet. All rights reserved.
 //
 
-#import "LoglnButton.h"
+#import "HyLoglnButton.h"
 
 
-@interface LoglnButton ()
+@interface HyLoglnButton ()
 
 @property (nonatomic,assign) CFTimeInterval shrinkDuration;
 
@@ -23,7 +23,7 @@
 
 @end
 
-@implementation LoglnButton
+@implementation HyLoglnButton
 
 -(instancetype) initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];

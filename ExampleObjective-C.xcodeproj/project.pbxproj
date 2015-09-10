@@ -15,7 +15,7 @@
 		87AD40FB1B972FA8007B3214 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87AD40F91B972FA8007B3214 /* LaunchScreen.xib */; };
 		87AD41071B972FA8007B3214 /* ExampleObjective_CTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AD41061B972FA8007B3214 /* ExampleObjective_CTests.m */; };
 		87AD41171B972FCE007B3214 /* SpinerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AD41121B972FCE007B3214 /* SpinerLayer.m */; };
-		87AD41181B972FCE007B3214 /* LoglnButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AD41141B972FCE007B3214 /* LoglnButton.m */; };
+		87AD41181B972FCE007B3214 /* HyLoglnButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AD41141B972FCE007B3214 /* HyLoglnButton.m */; };
 		87AD41191B972FCE007B3214 /* HyTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AD41161B972FCE007B3214 /* HyTransitions.m */; };
 		87AD411C1B972FDD007B3214 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AD411B1B972FDD007B3214 /* SecondViewController.m */; };
 		87AD411E1B97D0C8007B3214 /* Untitled.gif in Resources */ = {isa = PBXBuildFile; fileRef = 87AD411D1B97D0C8007B3214 /* Untitled.gif */; };
@@ -47,8 +47,8 @@
 		87AD41061B972FA8007B3214 /* ExampleObjective_CTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleObjective_CTests.m; sourceTree = "<group>"; };
 		87AD41111B972FCE007B3214 /* SpinerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpinerLayer.h; sourceTree = "<group>"; };
 		87AD41121B972FCE007B3214 /* SpinerLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpinerLayer.m; sourceTree = "<group>"; };
-		87AD41131B972FCE007B3214 /* LoglnButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoglnButton.h; sourceTree = "<group>"; };
-		87AD41141B972FCE007B3214 /* LoglnButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoglnButton.m; sourceTree = "<group>"; };
+		87AD41131B972FCE007B3214 /* HyLoglnButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyLoglnButton.h; sourceTree = "<group>"; };
+		87AD41141B972FCE007B3214 /* HyLoglnButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyLoglnButton.m; sourceTree = "<group>"; };
 		87AD41151B972FCE007B3214 /* HyTransitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyTransitions.h; sourceTree = "<group>"; };
 		87AD41161B972FCE007B3214 /* HyTransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyTransitions.m; sourceTree = "<group>"; };
 		87AD411A1B972FDD007B3214 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -141,8 +141,8 @@
 			children = (
 				87AD41111B972FCE007B3214 /* SpinerLayer.h */,
 				87AD41121B972FCE007B3214 /* SpinerLayer.m */,
-				87AD41131B972FCE007B3214 /* LoglnButton.h */,
-				87AD41141B972FCE007B3214 /* LoglnButton.m */,
+				87AD41131B972FCE007B3214 /* HyLoglnButton.h */,
+				87AD41141B972FCE007B3214 /* HyLoglnButton.m */,
 				87AD41151B972FCE007B3214 /* HyTransitions.h */,
 				87AD41161B972FCE007B3214 /* HyTransitions.m */,
 			);
@@ -263,7 +263,7 @@
 				87AD40F01B972FA8007B3214 /* AppDelegate.m in Sources */,
 				87AD41171B972FCE007B3214 /* SpinerLayer.m in Sources */,
 				87AD411C1B972FDD007B3214 /* SecondViewController.m in Sources */,
-				87AD41181B972FCE007B3214 /* LoglnButton.m in Sources */,
+				87AD41181B972FCE007B3214 /* HyLoglnButton.m in Sources */,
 				87AD40ED1B972FA8007B3214 /* main.m in Sources */,
 				87AD41191B972FCE007B3214 /* HyTransitions.m in Sources */,
 			);
