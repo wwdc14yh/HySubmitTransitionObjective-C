@@ -26,7 +26,7 @@ import "LoglnButton.h"
     [log addTarget:self action:@selector(PresentViewController:) forControlEvents:UIControlEventTouchUpInside];
  
  2.2 实现方法
-     ```
+```
 //网络正常 或者是密码账号正确跳转动画
         [button ExitAnimationCompletion:^{
             if (weak.Switch.on) {
@@ -42,7 +42,7 @@ import "LoglnButton.h"
             }
         }];
         
-    ```
+```
  2.3 创建控制器
 ```
     UIViewController *controller = [SecondViewController new];
@@ -50,7 +50,8 @@ import "LoglnButton.h"
     nai.transitioningDelegate = self;
     
     [self presentViewController:nai animated:YES completion:nil];
- ```
+```
+ 
  2.4 实现代理
 ```
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
