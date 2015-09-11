@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8766AAEB1BA2C36F003C9048 /* Untitled.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8766AAEA1BA2C36F003C9048 /* Untitled.gif */; };
 		87AD40ED1B972FA8007B3214 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AD40EC1B972FA8007B3214 /* main.m */; };
 		87AD40F01B972FA8007B3214 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AD40EF1B972FA8007B3214 /* AppDelegate.m */; };
 		87AD40F31B972FA8007B3214 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AD40F21B972FA8007B3214 /* ViewController.m */; };
@@ -18,7 +19,6 @@
 		87AD41181B972FCE007B3214 /* HyLoglnButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AD41141B972FCE007B3214 /* HyLoglnButton.m */; };
 		87AD41191B972FCE007B3214 /* HyTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AD41161B972FCE007B3214 /* HyTransitions.m */; };
 		87AD411C1B972FDD007B3214 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AD411B1B972FDD007B3214 /* SecondViewController.m */; };
-		87AD411E1B97D0C8007B3214 /* Untitled.gif in Resources */ = {isa = PBXBuildFile; fileRef = 87AD411D1B97D0C8007B3214 /* Untitled.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8766AAEA1BA2C36F003C9048 /* Untitled.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Untitled.gif; sourceTree = "<group>"; };
 		87AD40E71B972FA8007B3214 /* ExampleObjective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ExampleObjective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87AD40EB1B972FA8007B3214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87AD40EC1B972FA8007B3214 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -53,7 +54,6 @@
 		87AD41161B972FCE007B3214 /* HyTransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyTransitions.m; sourceTree = "<group>"; };
 		87AD411A1B972FDD007B3214 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		87AD411B1B972FDD007B3214 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		87AD411D1B97D0C8007B3214 /* Untitled.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Untitled.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +152,7 @@
 		87AD411F1B97D0D3007B3214 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				87AD411D1B97D0C8007B3214 /* Untitled.gif */,
+				8766AAEA1BA2C36F003C9048 /* Untitled.gif */,
 				87AD40F71B972FA8007B3214 /* Images.xcassets */,
 			);
 			name = Resources;
@@ -239,7 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87AD40F61B972FA8007B3214 /* Main.storyboard in Resources */,
-				87AD411E1B97D0C8007B3214 /* Untitled.gif in Resources */,
+				8766AAEB1BA2C36F003C9048 /* Untitled.gif in Resources */,
 				87AD40FB1B972FA8007B3214 /* LaunchScreen.xib in Resources */,
 				87AD40F81B972FA8007B3214 /* Images.xcassets in Resources */,
 			);

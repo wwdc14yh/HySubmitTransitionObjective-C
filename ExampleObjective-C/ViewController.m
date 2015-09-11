@@ -80,12 +80,12 @@
                                                                   presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {
     
-    return [[HyTransitions alloc]initWithTransitionDuration:0.5f StartingAlpha:0.8f isBOOL:true];
+    return [[HyTransitions alloc]initWithTransitionDuration:0.4f StartingAlpha:0.5f isBOOL:true];
 }
 
 - (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
 
-    return [[HyTransitions alloc]initWithTransitionDuration:0.5f StartingAlpha:0.8f isBOOL:false];
+    return [[HyTransitions alloc]initWithTransitionDuration:0.4f StartingAlpha:0.8f isBOOL:false];
 }
 
 - (void)didReceiveMemoryWarning {
