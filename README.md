@@ -6,7 +6,7 @@
 [![Language](http://img.shields.io/badge/language-ObjC-brightgreen.svg?style=flat)](https://developer.apple.com/Objective-C)
 [![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](http://mit-license.org)
 
-![Demo GIF Animation](https://raw.githubusercontent.com/wwdc14/TKSubmitTransitionObjective-C/master/Untitled.gif "Demo GIF Animation")
+![Demo GIF Animation](https://raw.githubusercontent.com/wwdc14/TKSubmitTransitionObjective-C/master/Demo.gif "Demo GIF Animation")
 
 # 1.原作者:@entotsu
 
