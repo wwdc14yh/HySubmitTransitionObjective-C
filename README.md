@@ -1,10 +1,10 @@
 # TKSubmitTransitionObjective-C
-# OC版的转场动画
-
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat
 )](https://developer.apple.com/iphone/index.action)
 [![Language](http://img.shields.io/badge/language-ObjC-brightgreen.svg?style=flat)](https://developer.apple.com/Objective-C)
 [![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](http://mit-license.org)
+
+# OC版的转场动画
 
 ![Demo GIF Animation](https://raw.githubusercontent.com/wwdc14/TKSubmitTransitionObjective-C/master/Demo.gif "Demo GIF Animation")
 
