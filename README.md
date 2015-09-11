@@ -1,10 +1,9 @@
 # TKSubmitTransitionObjective-C
+# OC版的转场动画
 
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat
-[![Language](http://img.shields.io/badge/language-Objective-C-brightgreen.svg?style=flat
-)](https://developer.apple.com/Objective-C)
-[![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
-)](http://mit-license.org)
+[![Language](http://img.shields.io/badge/language-Objective-C-brightgreen.svg?style=flat)](https://developer.apple.com/Objective-C)
+[![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](http://mit-license.org)
 
 ![image](https://raw.githubusercontent.com/wwdc14/TKSubmitTransitionObjective-C/master/Untitled.gif)
 
@@ -65,4 +64,3 @@ import "LoglnButton.h"
     return [[HyTransitions alloc]initWithTransitionDuration:0.4f StartingAlpha:0.8f isBOOL:false];
 }
 ```
-OC版的转场动画
