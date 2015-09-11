@@ -39,16 +39,58 @@
     return self;
 }
 
+-(void)setCompletion:(Completion)completion
+{
+    _block = completion;
+}
+
 -(void)setup{
 
     self.layer.cornerRadius = CGRectGetHeight(self.bounds) / 2;
     self.clipsToBounds = true;
+    [self addTarget:self action:@selector(scaleToSmall)
+   forControlEvents:UIControlEventTouchDown | UIControlEventTouchDragEnter];
+    [self addTarget:self action:@selector(scaleAnimation)
+   forControlEvents:UIControlEventTouchUpInside];
+    [self addTarget:self action:@selector(scaleToDefault)
+   forControlEvents:UIControlEventTouchDragExit];
     
 }
 
--(void)StartAnimationCompletion:(Completion)block{
+- (void)scaleToSmall
+{
+    typeof(self) __weak weak = self;
     
-    _block = block;
+    self.transform = CGAffineTransformMakeScale(1, 1);
+    [UIView animateWithDuration:0.3 delay:0 usingSpringWithDamping:0.5f initialSpringVelocity:0.0f options:UIViewAnimationOptionLayoutSubviews animations:^{
+        weak.transform = CGAffineTransformMakeScale(0.9, 0.9);
+    } completion:^(BOOL finished) {
+            
+    }];
+}
+
+- (void)scaleAnimation
+{
+    typeof(self) __weak weak = self;
+    [UIView animateWithDuration:0.3 delay:0 usingSpringWithDamping:0.5f initialSpringVelocity:0.0f options:UIViewAnimationOptionLayoutSubviews animations:^{
+        weak.transform = CGAffineTransformMakeScale(1, 1);
+    } completion:^(BOOL finished) {
+    }];
+    [self StartAnimation];
+}
+
+- (void)scaleToDefault
+{
+    typeof(self) __weak weak = self;
+    [UIView animateWithDuration:0.3 delay:0 usingSpringWithDamping:0.5f initialSpringVelocity:0.4f options:UIViewAnimationOptionLayoutSubviews animations:^{
+        weak.transform = CGAffineTransformMakeScale(1, 1);
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
+-(void)StartAnimation{
+    
     [self performSelector:@selector(Revert) withObject:nil afterDelay:0.f];
     [self.layer addSublayer:_spiner];
     CABasicAnimation *shrinkAnim = [CABasicAnimation animationWithKeyPath:@"bounds.size.width"];
@@ -63,9 +105,9 @@
     [self setUserInteractionEnabled:false];
 }
 
--(void)ErrorRevertAnimation
+-(void)ErrorRevertAnimationCompletion:(Completion)completion
 {
-    
+    _block = completion;
     CABasicAnimation *shrinkAnim = [CABasicAnimation animationWithKeyPath:@"bounds.size.width"];
     shrinkAnim.fromValue = @(CGRectGetHeight(self.bounds));
     shrinkAnim.toValue = @(CGRectGetWidth(self.bounds));
@@ -76,7 +118,6 @@
     _color = self.backgroundColor;
     
     CABasicAnimation *backgroundColor = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
-    //backgroundColor.fromValue = (__bridge id)self.backgroundColor.CGColor;
     backgroundColor.toValue  = (__bridge id)[UIColor redColor].CGColor;
     backgroundColor.duration = 0.1f;
     backgroundColor.timingFunction = _shrinkCurve;
@@ -112,9 +153,9 @@
     [self setUserInteractionEnabled:true];
 }
 
--(void)ExitAnimation{
+-(void)ExitAnimationCompletion:(Completion)completion{
 
-    
+    _block = completion;
     CABasicAnimation *expandAnim = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
     expandAnim.fromValue = @(1.0);
     expandAnim.toValue = @(33.0);
@@ -135,14 +176,8 @@
         if (_block) {
             _block();
         }
-        
         [NSTimer scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(DidStopAnimation) userInfo:nil repeats:nil];
-        
     }
-    if ([cab.keyPath isEqualToString:@"position"]) {
-        //[self performSelector:@selector(Revert) withObject:nil afterDelay:0.2];
-    }
-    
 }
 
 -(void)Revert{

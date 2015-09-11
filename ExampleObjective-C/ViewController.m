@@ -27,7 +27,7 @@
 -(void)createPresentControllerButton{
 
     HyLoglnButton *log = [[HyLoglnButton alloc] initWithFrame:CGRectMake(20, CGRectGetHeight(self.view.bounds) - (40 + 80), [UIScreen mainScreen].bounds.size.width - 40, 40)];
-    [log setBackgroundColor:[UIColor colorWithRed:0 green:119/255.0f blue:204.0f/255.0f alpha:1]];
+    [log setBackgroundColor:[UIColor colorWithRed:1 green:0.f/255.0f blue:128.0f/255.0f alpha:1]];
     [self.view addSubview:log];
     [log setTitle:@"登录" forState:UIControlStateNormal];
     [log addTarget:self action:@selector(PresentViewController:) forControlEvents:UIControlEventTouchUpInside];
@@ -36,26 +36,31 @@
 
 -(void)PresentViewController:(HyLoglnButton *)button{
     
+    typeof(self) __weak weak = self;
     //模拟网络访问
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        if (_Switch.on) {
-            //网络正常 或者是密码账号正确跳转动画
-            [button ExitAnimation];
-        }else{
-            //网络错误 或者是密码不正确还原动画
-            [button ErrorRevertAnimation];
-        }
-        
+        [weak LoginButton:button];
     });
-    [button StartAnimationCompletion:^{
-        
-        //网络结束后执行的方法
-        if (_Switch.on) {
-            [self didPresentControllerButtonTouch];
-        }
-        
-    }];
+}
+
+-(void)LoginButton:(HyLoglnButton *)button
+{
+    typeof(self) __weak weak = self;
+    if (_Switch.on) {
+        //网络正常 或者是密码账号正确跳转动画
+        [button ExitAnimationCompletion:^{
+            if (weak.Switch.on) {
+                [weak didPresentControllerButtonTouch];
+            }
+        }];
+    }else{
+        //网络错误 或者是密码不正确还原动画
+        [button ErrorRevertAnimationCompletion:^{
+            if (weak.Switch.on) {
+                [weak didPresentControllerButtonTouch];
+            }
+        }];
+    }
 }
 
 - (void)didPresentControllerButtonTouch

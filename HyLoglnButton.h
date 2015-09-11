@@ -15,10 +15,12 @@ typedef void(^Completion)();
 
 @property (nonatomic,retain) SpinerLayer *spiner;
 
--(void)StartAnimationCompletion:(Completion)block;
+-(void)setCompletion:(Completion)completion;
 
--(void)ErrorRevertAnimation;
+-(void)StartAnimation;
 
--(void)ExitAnimation;
+-(void)ErrorRevertAnimationCompletion:(Completion)completion;
+
+-(void)ExitAnimationCompletion:(Completion)completion;
 
 @end
