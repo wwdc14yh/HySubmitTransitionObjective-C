@@ -1,15 +1,21 @@
 # TKSubmitTransitionObjective-C
 
+[![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat
+[![Language](http://img.shields.io/badge/language-Objective-C-brightgreen.svg?style=flat
+)](https://developer.apple.com/Objective-C)
+[![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
+)](http://mit-license.org)
+
 ![image](https://raw.githubusercontent.com/wwdc14/TKSubmitTransitionObjective-C/master/Untitled.gif)
 
-1.原作者:@entotsu
+# 1.原作者:@entotsu
 
 1.1 原作者连接:https://github.com/entotsu/TKSubmitTransition
 
 
-2.使用:
-#import "HyTransitions.h"
-#import "LoglnButton.h"
+# 2.使用:
+import "HyTransitions.h"
+import "LoglnButton.h"
 
 2.1 创建button
 
@@ -20,33 +26,43 @@
     [log addTarget:self action:@selector(PresentViewController:) forControlEvents:UIControlEventTouchUpInside];
  
  2.2 实现方法
-    
-    [button StartAnimationCompletion:^{
+     ```
+//网络正常 或者是密码账号正确跳转动画
+        [button ExitAnimationCompletion:^{
+            if (weak.Switch.on) {
+                [weak didPresentControllerButtonTouch];
+            }
+        }];
         
-        [self didPresentControllerButtonTouch];
-
-    }];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
-        [button ExitAnimation];
+        //网络错误 或者是密码不正确还原动画
+        [button ErrorRevertAnimationCompletion:^{
+            if (weak.Switch.on) {
+                [weak didPresentControllerButtonTouch];
+            }
+        }];
         
-    });
-    
+    ```
  2.3 创建控制器
-
+```
     UIViewController *controller = [SecondViewController new];
+    UINavigationController *nai = [[UINavigationController alloc] initWithRootViewController:controller];
+    nai.transitioningDelegate = self;
     
-    controller.transitioningDelegate = self;
-    
-    [self presentViewController:controller animated:YES completion:nil];
- 
+    [self presentViewController:nai animated:YES completion:nil];
+ ```
  2.4 实现代理
-
+```
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
                                                                   presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {
     
-    return [[HyTransitions alloc]initWithTransitionDuration:0.5f StartingAlpha:0.8f];
+    return [[HyTransitions alloc]initWithTransitionDuration:0.4f StartingAlpha:0.5f isBOOL:true];
 }
 
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
+
+    return [[HyTransitions alloc]initWithTransitionDuration:0.4f StartingAlpha:0.8f isBOOL:false];
+}
+```
 OC版的转场动画
