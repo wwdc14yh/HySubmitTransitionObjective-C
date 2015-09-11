@@ -2,10 +2,11 @@
 # OC版的转场动画
 
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat
+)](https://developer.apple.com/iphone/index.action)
 [![Language](http://img.shields.io/badge/language-Objective-C-brightgreen.svg?style=flat)](https://developer.apple.com/Objective-C)
 [![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](http://mit-license.org)
 
-![image](https://raw.githubusercontent.com/wwdc14/TKSubmitTransitionObjective-C/master/Untitled.gif)
+![Demo GIF Animation](https://raw.githubusercontent.com/wwdc14/TKSubmitTransitionObjective-C/master/Untitled.gif "Demo GIF Animation")
 
 # 1.原作者:@entotsu
 
