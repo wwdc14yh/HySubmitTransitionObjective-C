@@ -65,6 +65,7 @@
 
 -(void)ErrorRevertAnimation
 {
+    
     CABasicAnimation *shrinkAnim = [CABasicAnimation animationWithKeyPath:@"bounds.size.width"];
     shrinkAnim.fromValue = @(CGRectGetHeight(self.bounds));
     shrinkAnim.toValue = @(CGRectGetWidth(self.bounds));
@@ -77,7 +78,7 @@
     CABasicAnimation *backgroundColor = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
     //backgroundColor.fromValue = (__bridge id)self.backgroundColor.CGColor;
     backgroundColor.toValue  = (__bridge id)[UIColor redColor].CGColor;
-    backgroundColor.duration = 0.3f;
+    backgroundColor.duration = 0.1f;
     backgroundColor.timingFunction = _shrinkCurve;
     backgroundColor.fillMode = kCAFillModeForwards;
     backgroundColor.removedOnCompletion = false;
@@ -124,14 +125,13 @@
     expandAnim.removedOnCompletion = false;
     [self.layer addAnimation:expandAnim forKey:expandAnim.keyPath];
     [_spiner stopAnimation];
-    [self setUserInteractionEnabled:true];
 }
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
 
     CABasicAnimation *cab = (CABasicAnimation *)anim;
     if ([cab.keyPath isEqualToString:@"transform.scale"]) {
-        
+        [self setUserInteractionEnabled:true];
         if (_block) {
             _block();
         }
@@ -149,7 +149,7 @@
 
     CABasicAnimation *backgroundColor = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
     backgroundColor.toValue  = (__bridge id)self.backgroundColor.CGColor;
-    backgroundColor.duration = 0.3f;
+    backgroundColor.duration = 0.1f;
     backgroundColor.timingFunction = _shrinkCurve;
     backgroundColor.fillMode = kCAFillModeForwards;
     backgroundColor.removedOnCompletion = false;
