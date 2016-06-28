@@ -11,6 +11,6 @@
 
 @interface HyTransitions : NSObject <UIViewControllerAnimatedTransitioning>
 
--(instancetype) initWithTransitionDuration:(NSTimeInterval)transitionDuration StartingAlpha:(CGFloat)startingAlpha isBOOL:(BOOL)is;
+-(instancetype) initWithTransitionDuration:(NSTimeInterval)transitionDuration StartingAlpha:(CGFloat)startingAlpha isPush:(BOOL)isPush;
 
 @end
