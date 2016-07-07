@@ -19,7 +19,7 @@
 
 @property (nonatomic, strong) HyAnimationCompletion animationCompletion;
 
-@property (nonatomic, strong) UIColor *backgroundColor;
+@property (nonatomic, strong) UIColor *color;
 
 @property (nonatomic, strong) HySpinerLayer *spinerLayer;
 
@@ -61,8 +61,8 @@
           initialSpringVelocity:0.0f
                         options:UIViewAnimationOptionLayoutSubviews
                      animations:^{
-        weak.transform = CGAffineTransformMakeScale(0.9, 0.9);
-    } completion:nil];
+                         weak.transform = CGAffineTransformMakeScale(0.9, 0.9);
+                     } completion:nil];
 }
 
 - (void)scaleAnimation {
@@ -73,8 +73,8 @@
           initialSpringVelocity:0.0f
                         options:UIViewAnimationOptionLayoutSubviews
                      animations:^{
-        weak.transform = CGAffineTransformMakeScale(1, 1);
-    } completion:nil];
+                         weak.transform = CGAffineTransformMakeScale(1, 1);
+                     } completion:nil];
     [self beginAnimation];
 }
 
@@ -86,8 +86,8 @@
           initialSpringVelocity:0.4f
                         options:UIViewAnimationOptionLayoutSubviews
                      animations:^{
-        weak.transform = CGAffineTransformMakeScale(1, 1);
-    } completion:nil];
+                         weak.transform = CGAffineTransformMakeScale(1, 1);
+                     } completion:nil];
 }
 
 - (void)beginAnimation {
@@ -114,7 +114,7 @@
     shrinkAnim.timingFunction = _shrinkCurve;
     shrinkAnim.fillMode = kCAFillModeForwards;
     shrinkAnim.removedOnCompletion = false;
-    _backgroundColor = self.backgroundColor;
+    _color = self.backgroundColor;
     
     CABasicAnimation *backgroundColor = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
     backgroundColor.toValue  = (__bridge id)[UIColor redColor].CGColor;
@@ -158,7 +158,7 @@
     expandAnim.fromValue = @(1.0);
     expandAnim.toValue = @(33.0);
     expandAnim.timingFunction = _expandCurve;
-    expandAnim.duration = 0.3; 
+    expandAnim.duration = 0.3;
     expandAnim.delegate = self;
     expandAnim.fillMode = kCAFillModeForwards;
     expandAnim.removedOnCompletion = false;
