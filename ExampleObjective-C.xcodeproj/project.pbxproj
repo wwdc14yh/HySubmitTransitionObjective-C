@@ -15,8 +15,8 @@
 		87AD40F81B972FA8007B3214 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87AD40F71B972FA8007B3214 /* Images.xcassets */; };
 		87AD40FB1B972FA8007B3214 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87AD40F91B972FA8007B3214 /* LaunchScreen.xib */; };
 		87AD41071B972FA8007B3214 /* ExampleObjective_CTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AD41061B972FA8007B3214 /* ExampleObjective_CTests.m */; };
-		87AD41171B972FCE007B3214 /* SpinerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AD41121B972FCE007B3214 /* SpinerLayer.m */; };
-		87AD41181B972FCE007B3214 /* HyLoglnButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AD41141B972FCE007B3214 /* HyLoglnButton.m */; };
+		87AD41171B972FCE007B3214 /* HySpinerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AD41121B972FCE007B3214 /* HySpinerLayer.m */; };
+		87AD41181B972FCE007B3214 /* HyLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AD41141B972FCE007B3214 /* HyLoginButton.m */; };
 		87AD41191B972FCE007B3214 /* HyTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AD41161B972FCE007B3214 /* HyTransitions.m */; };
 		87AD411C1B972FDD007B3214 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AD411B1B972FDD007B3214 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
@@ -46,10 +46,10 @@
 		87AD41001B972FA8007B3214 /* ExampleObjective-CTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ExampleObjective-CTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87AD41051B972FA8007B3214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87AD41061B972FA8007B3214 /* ExampleObjective_CTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleObjective_CTests.m; sourceTree = "<group>"; };
-		87AD41111B972FCE007B3214 /* SpinerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpinerLayer.h; sourceTree = "<group>"; };
-		87AD41121B972FCE007B3214 /* SpinerLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpinerLayer.m; sourceTree = "<group>"; };
-		87AD41131B972FCE007B3214 /* HyLoglnButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyLoglnButton.h; sourceTree = "<group>"; };
-		87AD41141B972FCE007B3214 /* HyLoglnButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyLoglnButton.m; sourceTree = "<group>"; };
+		87AD41111B972FCE007B3214 /* HySpinerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HySpinerLayer.h; sourceTree = "<group>"; };
+		87AD41121B972FCE007B3214 /* HySpinerLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HySpinerLayer.m; sourceTree = "<group>"; };
+		87AD41131B972FCE007B3214 /* HyLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyLoginButton.h; sourceTree = "<group>"; };
+		87AD41141B972FCE007B3214 /* HyLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyLoginButton.m; sourceTree = "<group>"; };
 		87AD41151B972FCE007B3214 /* HyTransitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyTransitions.h; sourceTree = "<group>"; };
 		87AD41161B972FCE007B3214 /* HyTransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyTransitions.m; sourceTree = "<group>"; };
 		87AD411A1B972FDD007B3214 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -139,10 +139,10 @@
 		87AD41101B972FBE007B3214 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				87AD41111B972FCE007B3214 /* SpinerLayer.h */,
-				87AD41121B972FCE007B3214 /* SpinerLayer.m */,
-				87AD41131B972FCE007B3214 /* HyLoglnButton.h */,
-				87AD41141B972FCE007B3214 /* HyLoglnButton.m */,
+				87AD41111B972FCE007B3214 /* HySpinerLayer.h */,
+				87AD41121B972FCE007B3214 /* HySpinerLayer.m */,
+				87AD41131B972FCE007B3214 /* HyLoginButton.h */,
+				87AD41141B972FCE007B3214 /* HyLoginButton.m */,
 				87AD41151B972FCE007B3214 /* HyTransitions.h */,
 				87AD41161B972FCE007B3214 /* HyTransitions.m */,
 			);
@@ -202,7 +202,7 @@
 		87AD40DF1B972FA8007B3214 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = ouy.Aberi;
 				TargetAttributes = {
 					87AD40E61B972FA8007B3214 = {
@@ -261,9 +261,9 @@
 			files = (
 				87AD40F31B972FA8007B3214 /* ViewController.m in Sources */,
 				87AD40F01B972FA8007B3214 /* AppDelegate.m in Sources */,
-				87AD41171B972FCE007B3214 /* SpinerLayer.m in Sources */,
+				87AD41171B972FCE007B3214 /* HySpinerLayer.m in Sources */,
 				87AD411C1B972FDD007B3214 /* SecondViewController.m in Sources */,
-				87AD41181B972FCE007B3214 /* HyLoglnButton.m in Sources */,
+				87AD41181B972FCE007B3214 /* HyLoginButton.m in Sources */,
 				87AD40ED1B972FA8007B3214 /* main.m in Sources */,
 				87AD41191B972FCE007B3214 /* HyTransitions.m in Sources */,
 			);
@@ -328,6 +328,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -393,6 +394,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ExampleObjective-C/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yunmai.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -403,6 +405,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ExampleObjective-C/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yunmai.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -421,6 +424,7 @@
 				);
 				INFOPLIST_FILE = "ExampleObjective-CTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yunmai.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExampleObjective-C.app/ExampleObjective-C";
 			};
@@ -436,6 +440,7 @@
 				);
 				INFOPLIST_FILE = "ExampleObjective-CTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yunmai.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExampleObjective-C.app/ExampleObjective-C";
 			};
